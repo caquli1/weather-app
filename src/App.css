@@ -1,38 +1,53 @@
-.App {
+@font-face {
+  font-family: 'font';
+  src: url(../font/SF-Pro-Display-Bold.otf);
+}
+body{
+  background-color: rgb(48, 48, 48);
+  font-family: 'font';
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+}
+
+.App{
   text-align: center;
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
+  margin: 50px auto 0;
+  padding: 20px 15px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.search{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.weather-info {
   display: flex;
   flex-direction: column;
+  gap: 10px; 
+}
+
+.weather-item {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 8px; 
 }
 
-.App-link {
-  color: #61dafb;
+.icon {
+  font-size: 20px; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.value {
+  font-size: 16px; 
+  color: #333; 
 }
