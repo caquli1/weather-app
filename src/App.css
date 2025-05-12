@@ -3,24 +3,8 @@
   src: url(../font/SF-Pro-Display-Bold.otf);
 }
 body{
-  background-color: rgb(48, 48, 48);
-  font-family: 'font';
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  margin: 0;
-  padding: 0;
-}
-
-.App{
-  text-align: center;
-  width: 300px;
-  height: 300px;
-  border-radius: 20px;
   background-color: rgb(255, 255, 255);
-  margin: 50px auto 0;
-  padding: 20px 15px;
+  font-family: 'font';
 }
 
 .search{
@@ -31,23 +15,109 @@ body{
   margin-top: 20px;
 }
 
-.weather-info {
+.current-weather{
   display: flex;
   flex-direction: column;
-  gap: 10px; 
+  align-items: center;
 }
 
-.weather-item {
+.highlights-forecast{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 1000px;
+  height: 350px;
+}
+
+.parent{
+  display: flex;
+  justify-content: center;
+}
+
+.highlight{
   display: flex;
   align-items: center;
-  gap: 8px; 
+  gap: 10px;
 }
 
-.icon {
-  font-size: 20px; 
+.highlight-info{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 200px;
+  height: 100px;
+  border-radius: 10px;
+  border: 2px solid rgb(0, 0, 0);
 }
 
-.value {
-  font-size: 16px; 
-  color: #333; 
+.info{
+  display: flex;
+  flex-direction: column;
+}
+
+.forecast{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.forecast-row{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.forecast-item {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center;
+  overflow-wrap: break-word;
+  margin: 0;
+  width: 127px;
+  height: 130px;
+  border-radius: 10px;
+  border: 2px solid rgb(0, 0, 0);
+}
+
+@media only screen and (max-width: 500px) {
+  .App{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-item: center;
+    padding: 10px;
+  }
+
+  .highlights-forecast{
+    width: 100%;
+    height: auto;
+    gap: 20px;
+  }
+
+  .highlight {
+    flex-wrap: wrap; 
+    justify-content: center;
+  }
+
+  .highlight-info {
+    width: 45%; 
+    height: auto;
+  }
+
+  .forecast-row {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  .forecast-item {
+    width: 90%;
+    height: auto;
+  }
+
+  .search {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
 }
