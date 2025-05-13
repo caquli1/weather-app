@@ -40,6 +40,7 @@ function App() {
   return (
     <div className='App'>
       <div className='search'>
+        <p>Hello "test"</p>
         <TextField id="outlined-basic" variant="outlined" value={city} onChange={handleCityChange} sx={{ bgcolor: "white" }}/>
         <Button variant="contained" color="primary" onClick={fetchData}>Search</Button>
       </div>
